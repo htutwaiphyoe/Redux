@@ -1,15 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import Song from "./Song/Song";
-
-class SongList extends React.Component {
-    showList() {
-        return this.props.songs.map((song) => <Song song={song} key={song.title} />);
-    }
-    render() {
-        return <div className="ui divided list">{this.showList()}</div>;
-    }
-}
+const SongList = (props) => {
+    const songs = props.songs.map((song) => <Song song={song} key={song.title} />);
+    return <div>{songs}</div>;
+};
 
 const mapStateToProps = (state) => {
     return {

@@ -1,18 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
-import { selectSong } from "../../../actions";
+import actionCreator from "../../../actions";
 const Song = (props) => {
-    const { song } = props;
+    const { title } = props.song;
+
     return (
-        <div className="item" key={song.title}>
-            <div className="right floated content">
-                <button className="ui button primary" onClick={() => props.selectSong(song)}>
-                    Select
-                </button>
-            </div>
-            <div className="content">{song.title}</div>
+        <div>
+            <p>{title}</p>
+            <button onClick={() => props.selectSong("SELECT_SONG", props.song)}>Select</button>
         </div>
     );
 };
-const mapDispatchToProps = { selectSong };
+
+const mapDispatchToProps = {
+    selectSong: actionCreator,
+};
 export default connect(null, mapDispatchToProps)(Song);

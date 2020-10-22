@@ -6,7 +6,6 @@ import "./index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import reducers from "./reducers";
-
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={createStore(reducers)}>
