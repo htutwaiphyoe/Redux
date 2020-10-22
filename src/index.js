@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import "./index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
-import reducers from "./reducers";
+import reducers from "./reducers/AsyncReducer";
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={createStore(reducers)}>
