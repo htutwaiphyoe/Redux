@@ -1,14 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
+import classes from "./SongList.module.css";
 const SongDetail = (props) => {
     const { song } = props;
     if (song) {
         return (
-            <div>
-                <p>Song Detail</p>
-                <p>{song.title}</p>
-                <p>{song.artist}</p>
-                <p>{song.duration}</p>
+            <div className={classes.SongDetail}>
+                <h2>Song Detail</h2>
+                <p>Title: {song.title}</p>
+                <p>Artist: {song.artist}</p>
+                <p>Duration: {song.duration}</p>
             </div>
         );
     }

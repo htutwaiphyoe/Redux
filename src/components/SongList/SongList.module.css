@@ -1,0 +1,3 @@
+.SongList div:nth-last-child(1) {
+    margin: 0;
+}
