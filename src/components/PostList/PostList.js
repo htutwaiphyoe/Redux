@@ -14,6 +14,6 @@ class PostList extends React.Component {
     }
 }
 const mapDispatchToProps = {
-    fetchPosts: actionCreators.fetchPostsAsync,
+    fetchPosts: actionCreators.fetchPosts,
 };
 export default connect(null, mapDispatchToProps)(PostList);
