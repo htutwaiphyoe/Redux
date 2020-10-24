@@ -2,20 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actionCreators from "../../../actions/asyncAction";
 class User extends Component {
-    state = {
-        id: [],
-    };
     componentDidMount() {
-        if (this.state.id.length > 0) {
-            if (this.state.id.find((id) => id === this.props.id) === -1) {
-                console.log("ok");
-                this.setState({ id: [...this.state.id, this.props.id] });
-                this.props.fetchUser(this.props.id);
-            }
-        } else {
-            this.setState({ id: [...this.state.id, this.props.id] });
-            this.props.fetchUser(this.props.id);
-        }
+        this.props.fetchUser(this.props.id);
     }
     show() {
         const { user } = this.props;
